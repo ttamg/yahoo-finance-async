@@ -1,0 +1,8 @@
+-r requirements.txt
+
+pytest-asyncio
+pylint
+black
+flit
+jupyter
+notebook

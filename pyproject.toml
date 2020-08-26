@@ -1,0 +1,20 @@
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "yahoo_finance"
+author = "Matt Gosden"
+author-email = "mdgosden@gmail.com"
+home-page = "https://github.com/ttamg/yahoo_finance_async"
+classifiers = [
+"License :: OSI Approved :: MIT License",
+"Intended Audience :: Developers",
+"Intended Audience :: Financial and Insurance Industry",
+"Programming Language :: Python :: 3 :: Only",
+"Topic :: Office/Business :: Financial :: Investment"
+]
+requires = ["aiohttp>=3.6.2", "aiodns>=2.0.0"]
+requires-python=">=3.6"
+description-file="README.md"
+keywords = "yahoo, finance, python, API, async"
