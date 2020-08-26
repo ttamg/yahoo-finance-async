@@ -25,8 +25,7 @@ Install from **PyPi** using
 
     pip install yahoo-finance-async
 
-
-Note that when importing in python modules you drop the async and you `import yahoo_finance`.
+Note that you import it into your module with underscores `import yahoo_finance_async`
 
 This library has a simple class called `OHLC` which has a simple class method (actually an async coroutine) called `fetch()` which will fetch and parse the candle (OHLC) data.
 
@@ -37,7 +36,7 @@ For example to fetch this historical data for the stock **AAPL**:
 ```python
     import asyncio
 
-    from yahoo_finance import OHLC
+    from yahoo_finance_async import OHLC
 
     async def main():
         
@@ -75,7 +74,7 @@ The returned **result** is a dictionary with two parts:
 Additional parameters can be passed to the `OHLC.fetch()` class method 
 
 ```python
-    from yahoo_finance import OHLC, Interval, History
+    from yahoo_finance_async import OHLC, Interval, History
 
     # Fetch weekly candles for the last year
     await OHLC('AAPL', interval=Interval.WEEK, history=History.YEAR)

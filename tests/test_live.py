@@ -2,7 +2,7 @@ import datetime
 
 import pytest
 
-from yahoo_finance import OHLC, History, Interval
+from yahoo_finance_async import OHLC, History, Interval
 
 
 @pytest.mark.asyncio
