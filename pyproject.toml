@@ -6,7 +6,7 @@ build-backend = "flit_core.buildapi"
 module = "yahoo_finance_async"
 author = "Matt Gosden"
 author-email = "mdgosden@gmail.com"
-home-page = "https://github.com/ttamg/yahoo_finance_async"
+home-page = "https://github.com/ttamg/yahoo-finance-async"
 classifiers = [
 "License :: OSI Approved :: MIT License",
 "Intended Audience :: Developers",
