@@ -89,7 +89,7 @@ The `Interval` and `History` objects are Enums which show which time periods are
 
 ## Example notebook
 
-To see a live example you can look at the [attached notebook](notebooks/ohlc-example.ipynb)
+To see a live example you can look at the [attached notebook](examples/ohlc-example.ipynb)
 
 
 ## Rate limits
