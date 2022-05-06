@@ -155,6 +155,9 @@ class OHLC:
 
             return candles, meta
 
+        except TypeError as e:
+            return candles, meta
+
         except Exception as e:
             raise APIError(
                 f"Unable to parse the OHLC candle data from the Yahoo Finance API response - {e}"
