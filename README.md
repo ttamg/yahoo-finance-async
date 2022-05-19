@@ -103,3 +103,9 @@ Currently this API is focused just on the OHLC candle data.  If you wish to cont
 Developers should clone the GitHub repo, and then install the development dependencies in the *requirement-dev.txt* file.  Run all tests with *pytest*. 
 
 If you do contribute please also keep tests and documentation up to date.  Thanks.
+
+
+## Release Notes
+
+* 0.1.2 - Fix to stop processing when None values are received from the API when parsing candles
+* 0.1.3 - Revised fix to the None values from API when parsing.  Now the API will drop candles that cannot be parsed but will raise a Python warning message when this happens.

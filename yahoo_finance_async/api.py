@@ -1,6 +1,7 @@
 import asyncio
-import json
 import datetime
+import json
+import warnings
 from enum import Enum
 
 import aiohttp
@@ -142,20 +143,22 @@ class OHLC:
                 indicators["close"],
                 indicators["volume"],
             ):
-                candles.append(
-                    {
-                        "datetime": time,
-                        "open": float(open),
-                        "high": float(high),
-                        "low": float(low),
-                        "close": float(close),
-                        "volume": float(volume),
-                    }
-                )
+                try:
+                    candles.append(
+                        {
+                            "datetime": time,
+                            "open": float(open),
+                            "high": float(high),
+                            "low": float(low),
+                            "close": float(close),
+                            "volume": float(volume),
+                        }
+                    )
+                except TypeError as e:
+                    warnings.warn(
+                        f"Unable to parse some of the candle values at time period {time} - Skipping this candle and continuing."
+                    )
 
-            return candles, meta
-
-        except TypeError as e:
             return candles, meta
 
         except Exception as e:
